@@ -1,14 +1,8 @@
-# Author: Donovan Guelde
-# CSCI-3202 Fall 2015
-# Prof. Hoenigman
-# HW 1 Python data structures
-#implement a queue, stack, BST, and graph using Python
-
-from ClassDefinitions import Stack
-from ClassDefinitions import Node
-from ClassDefinitions import BinaryTree
-from ClassDefinitions import Graph
-from ClassDefinitions import manualOperation
+from Guelde_Assignment1 import Stack
+from Guelde_Assignment1 import Node
+from Guelde_Assignment1 import BinaryTree
+from Guelde_Assignment1 import Graph
+from Guelde_Assignment1 import manualOperation
 import Queue
 
 
@@ -147,18 +141,20 @@ def graphTest(graph):
 	graph.findVertex(9)
 
 
-
 def main():
+	
+
+	#manualOperation()
 	# initialize data structures
 	q = Queue.Queue() 
 	stack = Stack() 
 	tree = BinaryTree()
 	graph = Graph()
+	#queue testing
 	dequeueTest(q)
 	stackTest(stack)
 	treeTest(tree)
 	graphTest(graph)
-	graph.deleteGraph() #need to delete manually so user can start over with an empty graph, if desired
 	menuCommand = "a"
 	menuCommand = raw_input ("Enter 1 to manually manipulate data structures, any other key to exit\n")
 	if (menuCommand == "1"):
